@@ -1,0 +1,1 @@
+web: gunicorn catalago_filmes.wsgi
