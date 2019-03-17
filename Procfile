@@ -1,1 +1,1 @@
-web: gunicorn catalago_filmes.wsgi
+web: gunicorn demoday.wsgi
