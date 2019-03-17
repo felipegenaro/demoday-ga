@@ -350,7 +350,7 @@ section div {
     
     
 .projetos {
-        background-image: linear-gradient(to right, rgb(16, 182, 65), rgb(9, 121, 43));
+        background-image: linear-gradient(to right, rgba(16, 182, 65, 0.9), rgba(9, 121, 43, 0.7));
         grid-area: projetos;
         height: 600px;
 }
@@ -654,7 +654,9 @@ footer {
                              'substancias particulas'
                              'outras condicao'
                              'legenda legenda';
-        margin:  10px 100px 10px 100px;
+        /* margin:  10px 100px 10px 100px; */
+        padding:  10px 100px 10px 100px;
+        font-size: 1.5em;
 }
 
 #divEstacao {
@@ -702,15 +704,15 @@ footer {
 }
 
 .tabelaLegenda #th2 {
-        width: 12%;
+        width: 17%;
 }
 
 .tabelaLegenda #th3 {
-        width: 15%;
+        width: 20%;
 }
 
 .tabelaLegenda #th4 {
-        width: 65%;
+        width: 60%;
 }
 
 #legendaVerde {

@@ -11,14 +11,14 @@ fetch(`https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff
     // city = data.city.name;
     if(data.attributions[0].name) estacao = data.attributions[0].name; else estacao = '-'
     if(data.time.s) consultado = data.time.s; else consultado = '-'
-    if(data.iaqi.co) co = data.iaqi.co.v; else co = 0
+    if(data.iaqi.co) co = data.iaqi.co.v; else co = '0'
     if(data.iaqi.h) h = data.iaqi.h.v; else h = '-'
-    if(data.iaqi.no2) no2 = data.iaqi.no2.v; else no2 = 0
+    if(data.iaqi.no2) no2 = data.iaqi.no2.v; else no2 = '0'
     if(data.iaqi.o3) o3 = data.iaqi.o3.v; else o3 = '-'
-    if(data.iaqi.p) p = data.iaqi.p.v; else p = 0
-    if(data.iaqi.pm10) pm10 = data.iaqi.pm10.v; else pm10 = 0
-    if(data.iaqi.pm25) pm25 = data.iaqi.pm25.v; else pm25 = 0
-    if(data.iaqi.so2) so2 = data.iaqi.so2.v; else so2 = 0
+    if(data.iaqi.p) p = data.iaqi.p.v; else p = '0'
+    if(data.iaqi.pm10) pm10 = data.iaqi.pm10.v; else pm10 = '0'
+    if(data.iaqi.pm25) pm25 = data.iaqi.pm25.v; else pm25 = '0'
+    if(data.iaqi.so2) so2 = data.iaqi.so2.v; else so2 = '0'
     // t = data.iaqi.t.v;
     if(data.iaqi.w) w = data.iaqi.w.v; else w = '-'
     // wg = data.iaqi.wg.v;
@@ -76,15 +76,7 @@ fetch(`https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff
 
 });
     
-fetch(`https://api.hgbrasil.com/weather?key=a007949b&city_name=Sao%20Paulo,SP&format=json-cors`, {
-    method: 'GET',
-    mode: 'cors',
-
-    headers: {
-      'Accept': 'application/json',
-      'Content-type': 'application/json; charset=UTF-8',
-    }
-})
+fetch(`https://api.hgbrasil.com/weather?key=42e7332c&city_name=Sao%20Paulo,SP&format=json-cors`)
 .then(data2 => data2.json())
 .then(intel => {
     // const selector = selector => document.querySelector(selector);
