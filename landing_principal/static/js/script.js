@@ -73,40 +73,42 @@ fetch(`https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff
         }
 
         // console.log(data);
+        
+        
+        fetch(`https://api.hgbrasil.com/weather?key=a007949b&city_name=Sao%20Paulo,SP&format=json-cors`)
+        .then(data2 => data2.json())
+        .then(intel => {
+            // const selector = selector => document.querySelector(selector);
+                data2 = intel.results;
+                temp = data2.temp;
+                dataConsulta = data2.date;
+                horaConsulta = data2.time;
+                weatherCondicao = ['Tempestade Forte', 'Tempestade Tropical', 'Furacão', 'Tempestades Severas', 'Tempestades', 'Misto de Neve e Chuva', 'Misto de Chuva e Gelo', 'Misto de Neve e Gelo', 'Geada Fina', 'Chuviscos', 'Congelamento e Chuva', 'Alguns Chuviscos', 'Alguns Chuviscos', 'Neve Baixa', 'Tempestade com Neve', 'Ventania com Neve', 'Neve', 'Granizo', 'Gelo', 'Poeira', 'Neblina', 'Tempestade de Areia', 'Fumacento', 'Vento Acentuado', 'Ventania', 'Tempo Frio', 'Tempo Nublado', 'Tempo Limpo', 'Tempo Nublado', 'Parcialmente Nublado', 'Parcialmente Nublado', 'Tempo Limpo', 'Ensolarado', 'Estrelado', 'Ensolarado com Muitas Nuvens', 'Misto de Chuva e Granizo', 'Ar Quente', 'Tempestades Isoladas', 'Trovoadas Dispersas', 'Trovoadas Dispersas', 'Chuvas Esparsas', 'Pesados de Neve', 'Chuviscos com Neve', 'Neve Pesada', 'Sol com Poucas Nuvens', 'Chuva', 'Queda de Neve', 'Tempestades Isoladas', 'Serviço não Disponivel'];
+                nrCondicao = data2.condition_code;
+                condicaoAtual = weatherCondicao[parseInt(nrCondicao)];
+                diaNoite = data2.currently;
+                cidade = data2.city;
+                humidade = data2.humidity;
+                velocidadeVento = data2.wind_speedy;
+                amanhecer = data2.sunrise;
+                anoitecer = data2.sunset;
+                conditionSlug = data2.condition_slug;
+                nomeCidade = data2.city_name;
+        
+                // console.log(data2);
+                // console.log(condicaoAtual);
+                selector('#temp').append(temp);
+                // selector('#data-consulta').append(dataConsulta);
+                // selector('#hora-consulta').append(horaConsulta);
+                selector('#condicaoAtual').append(condicaoAtual);
+                // selector('#dia-noite').append(diaNoite);
+                // selector('#city').append(cidade);
+                selector('#humidade').append(humidade);
+                selector('#velocidadeVento').append(velocidadeVento);
+                // selector('#amanhecer').append(amanhecer);
+                // selector('#anoitecer').append(anoitecer);
+                // selector('#condition-slug').append(conditionSlug);
+                selector('#city').append(nomeCidade);
+        });
 });
     
-fetch(`https://api.hgbrasil.com/weather?key=a007949b&city_name=Sao%20Paulo,SP&format=json-cors`)
-.then(data2 => data2.json())
-.then(intel => {
-    // const selector = selector => document.querySelector(selector);
-        data2 = intel.results;
-        temp = data2.temp;
-        dataConsulta = data2.date;
-        horaConsulta = data2.time;
-        weatherCondicao = ['Tempestade Forte', 'Tempestade Tropical', 'Furacão', 'Tempestades Severas', 'Tempestades', 'Misto de Neve e Chuva', 'Misto de Chuva e Gelo', 'Misto de Neve e Gelo', 'Geada Fina', 'Chuviscos', 'Congelamento e Chuva', 'Alguns Chuviscos', 'Alguns Chuviscos', 'Neve Baixa', 'Tempestade com Neve', 'Ventania com Neve', 'Neve', 'Granizo', 'Gelo', 'Poeira', 'Neblina', 'Tempestade de Areia', 'Fumacento', 'Vento Acentuado', 'Ventania', 'Tempo Frio', 'Tempo Nublado', 'Tempo Limpo', 'Tempo Nublado', 'Parcialmente Nublado', 'Parcialmente Nublado', 'Tempo Limpo', 'Ensolarado', 'Estrelado', 'Ensolarado com Muitas Nuvens', 'Misto de Chuva e Granizo', 'Ar Quente', 'Tempestades Isoladas', 'Trovoadas Dispersas', 'Trovoadas Dispersas', 'Chuvas Esparsas', 'Pesados de Neve', 'Chuviscos com Neve', 'Neve Pesada', 'Sol com Poucas Nuvens', 'Chuva', 'Queda de Neve', 'Tempestades Isoladas', 'Serviço não Disponivel'];
-        nrCondicao = data2.condition_code;
-        condicaoAtual = weatherCondicao[parseInt(nrCondicao)];
-        diaNoite = data2.currently;
-        cidade = data2.city;
-        humidade = data2.humidity;
-        velocidadeVento = data2.wind_speedy;
-        amanhecer = data2.sunrise;
-        anoitecer = data2.sunset;
-        conditionSlug = data2.condition_slug;
-        nomeCidade = data2.city_name;
-
-        // console.log(data2);
-        // console.log(condicaoAtual);
-        selector('#temp').append(temp);
-        // selector('#data-consulta').append(dataConsulta);
-        // selector('#hora-consulta').append(horaConsulta);
-        selector('#condicaoAtual').append(condicaoAtual);
-        // selector('#dia-noite').append(diaNoite);
-        // selector('#city').append(cidade);
-        selector('#humidade').append(humidade);
-        selector('#velocidadeVento').append(velocidadeVento);
-        // selector('#amanhecer').append(amanhecer);
-        // selector('#anoitecer').append(anoitecer);
-        // selector('#condition-slug').append(conditionSlug);
-        selector('#city').append(nomeCidade);
-});
