@@ -76,7 +76,15 @@ fetch(`https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff
 
 });
     
-fetch(`https://api.hgbrasil.com/weather?key=a007949b&city_name=Sao%20Paulo,SP&format=json-cors`, {mode: 'cors'})
+fetch(`https://api.hgbrasil.com/weather?key=a007949b&city_name=Sao%20Paulo,SP&format=json-cors`, {
+    method: 'GET',
+    mode: 'cors',
+
+    headers: {
+      'Accept': 'application/json',
+      'Content-type': 'application/json; charset=UTF-8',
+    }
+})
 .then(data2 => data2.json())
 .then(intel => {
     // const selector = selector => document.querySelector(selector);
