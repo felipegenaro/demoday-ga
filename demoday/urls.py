@@ -18,6 +18,8 @@ from django.urls import path
 from landing_principal.views import render_index
 from contato_page.views import adicionar_contato
 from indice_poluentes.views import retorna_poluentes
+from projeto_intermediario.views import retorna_projeto_intermediario
+from servicos_intermediario.views import retorna_projeto_intermediario
 from projeto_3r.views import retorna_3r
 
 urlpatterns = [
@@ -25,5 +27,7 @@ urlpatterns = [
     path('', render_index, name='home'),
     path('contato/', adicionar_contato, name='contato'),
     path('indice_poluentes/', retorna_poluentes, name='poluentes'),
+    path('projetos/', retorna_projeto_intermediario, name='projetos'),
+    path('servicos/', retorna_projeto_intermediario, name='servicos'),
     path('projeto_3r/', retorna_3r, name='3r'),
 ]

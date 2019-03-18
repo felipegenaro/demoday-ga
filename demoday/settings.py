@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'landing_principal',
     'contato_page',
     'indice_poluentes',
+    'projeto_intermediario',
+    'servicos_intermediario',
     'projeto_3r',
 ]
 
