@@ -18,10 +18,12 @@ from django.urls import path
 from landing_principal.views import render_index
 from contato_page.views import adicionar_contato
 from indice_poluentes.views import retorna_poluentes
+from projeto_3r.views import retorna_3r
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', render_index, name='home'),
     path('contato/', adicionar_contato, name='contato'),
     path('indice_poluentes/', retorna_poluentes, name='poluentes'),
+    path('projeto_3r/', retorna_3r, name='3r'),
 ]

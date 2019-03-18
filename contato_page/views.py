@@ -7,6 +7,9 @@ def adicionar_contato(request):
         formulario = ContatoCriarForm(request.POST or None)
 
         if formulario.is_valid():
+                # formulario.fields['nome']
+                if formulario.fields['nome'] == '': formulario.fields['nome'] = 'Anonimo'
+                if formulario.fields['email'] == '': formulario.fields['email'] = 'Anonimo'
                 formulario.save()
                 formulario = ContatoCriarForm()
 

@@ -385,7 +385,8 @@ section div {
         box-shadow: 1px 1px #000000;
 }
 .recicla:hover {
-        transition: 0.5s;
+        /* transition: 0.5s; */
+        transition: all 0.5s ease;
         background-image: url(../imgs/recicla-front1.png);
         cursor: pointer;
 }
@@ -400,7 +401,8 @@ section div {
         box-shadow: 1px 1px #000000;
 }
 .vila:hover {
-        transition: 0.5s;
+        /* transition: 0.5s; */
+        transition: all 0.5s ease;
         background-image: url(../imgs/vila-butanta1.png);
         cursor: pointer;
 }
@@ -415,7 +417,8 @@ section div {
         box-shadow: 1px 1px #000000;
 }
 .sem-copinhos:hover {
-        transition: 0.5s;
+        /* transition: 0.5s; */
+        transition: all 0.5s ease;
         background-image: url(../imgs/sem-copinhos1.png);
         cursor: pointer;
 }
@@ -431,7 +434,8 @@ section div {
         box-shadow: 1px 1px #000000;
 }
 .pjt-copinhos:hover {
-        transition: 0.5s;
+        /* transition: 0.5s; */
+        transition: all 0.5s ease;
         background-image: url(../imgs/pjt-copinhos1.png);
         cursor: pointer;
 }
@@ -447,7 +451,8 @@ section div {
         box-shadow: 1px 1px #000000;
 }
 .arcgis:hover {
-        transition: 0.5s;
+        /* transition: 0.5s; */
+        transition: all 0.5s ease;
         background-image: url(../imgs/argis1.png);
         cursor: pointer;
 }
@@ -462,7 +467,8 @@ section div {
         box-shadow: 1px 1px #000000;
 }
 .each-recicla:hover {
-        transition: 0.5s;
+        /* transition: 0.5s; */
+        transition: all 0.5s ease;
         background-image: url(../imgs/each-recicla1.png);
         cursor: pointer;
 }
@@ -695,24 +701,22 @@ footer {
         padding: 10px 0px;
 }
 
-.tabelaLegenda tr:hover {
-        background-color: rgba(0, 0, 0, 0.02);
-}
+.tabelaLegenda tr:hover { background-color: rgba(0, 0, 0, 0.02); }
 
 .tabelaLegenda #th1 {
-        width: 3%;
+        width: 2%;
 }
 
 .tabelaLegenda #th2 {
-        width: 17%;
+        width: 18%;
 }
 
 .tabelaLegenda #th3 {
-        width: 20%;
+        width: 22%;
 }
 
 .tabelaLegenda #th4 {
-        width: 60%;
+        width: 58%;
 }
 
 #legendaVerde {
@@ -761,4 +765,77 @@ footer {
         border-radius: 10px;
         background-color: brown;
         margin-left: 10px;
+}
+
+.divAll3r{
+        display: grid;
+        grid-template-areas: '3rs'
+                             'projeto'
+                             'reduzir'
+                             'reutilizar'
+                             'reciclar';
+        /* margin:  10px 100px 10px 100px; */
+        /* padding:  10px 100px 10px 100px; */
+        font-size: 1.5em;
+}
+
+.divAll3r b {
+        color: green;
+}
+
+#div3rs {
+        grid-area: 3rs;
+        background-color: #E8E8E8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+#divProjeto {
+        grid-area: projeto;
+        margin: 15px 200px 15px 200px;
+}
+
+#divReduzir {
+        border: green solid 2px;
+        border-radius: 30px;
+        display: flex;
+        grid-area: reduzir;
+        margin: 15px 200px 15px 200px;
+}
+
+#divReduzir:hover { background-color: rgba(0, 0, 0, 0.02); }
+
+#divReutilizar {
+        border: green solid 2px;
+        border-radius: 30px;
+        display: flex;
+        grid-area: reutilizar;
+        margin: 15px 200px 15px 200px;
+}
+
+#divReutilizar:hover { background-color: rgba(0, 0, 0, 0.02); }
+
+#divReciclar {
+        border: green solid 2px;
+        border-radius: 30px;
+        display: flex;
+        grid-area: reciclar;
+        margin: 15px 200px 15px 200px;;
+}
+
+#divReciclar:hover { background-color: rgba(0, 0, 0, 0.03); }
+
+.divAll3r img {
+        height: 100px;
+        width: 100px;
+        border-radius: 15px;
+        margin: 30px 15px 0px 15px;
+}
+
+#div3rs div img {
+        height: 50px;
+        width: 50px;
+        border-radius: 15px;
+        margin: 5px;
 }

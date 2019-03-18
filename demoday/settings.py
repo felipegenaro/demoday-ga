@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'landing_principal',
     'contato_page',
     'indice_poluentes',
+    'projeto_3r',
 ]
 
 MIDDLEWARE = [

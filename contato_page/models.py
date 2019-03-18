@@ -14,10 +14,11 @@ class Contato(models.Model):
         ]
 
 
-        nome = models.CharField(max_length=40)
-        email =  models.EmailField()
+        nome = models.CharField(max_length=40, blank=True, null=False)
+        email =  models.EmailField(blank=True, null=False)
         assunto = models.CharField(max_length=2, choices=ASSUNTO, default=SUGESTAO)
-        descricao = models.TextField(max_length=240, blank=True, null=True)
+        descricao = models.TextField(max_length=240, blank=False, null=False)
 
         def __str__(self):
-                return self.email
+                if self.email == '': self.email = 'Anonimo'
+                return f'{self.email} - Assunto: {self.assunto}'

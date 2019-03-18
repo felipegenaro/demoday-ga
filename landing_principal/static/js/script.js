@@ -1,6 +1,6 @@
 const selector = selector => document.querySelector(selector);
 
-fetch(`https://api.waqi.info/feed/here/?token=9618831b634035f7761dde5f90311d91ff1fbfce`)
+fetch(`https://api.waqi.info/feed/here/?token=1211c97c41147ca1e1f5ccad441024e83acbfd8e`)
 .then(data => data.json())
 .then(intel => {
     data = intel.data;
