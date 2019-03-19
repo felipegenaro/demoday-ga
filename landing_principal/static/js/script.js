@@ -31,13 +31,17 @@ fetch(`https://api.waqi.info/feed/here/?token=1211c97c41147ca1e1f5ccad441024e83a
     // selector('#status').append();
     if(consultado) selector('#consultado').append(consultado);
     if(co) selector('#COprogress').value = co;
+    if(co) selector('#COlabel').append(co);
     if(h) selector('#h').append(h);
     if(no2) selector('#NO2progress').value = no2;
+    if(no2) selector('#NO2label').append(no2);
     if(o3) selector('#o3').append(o3);
     if(p) selector('#Pprogress').value = p;
+    if(p) selector('#Plabel').append(p);
     if(pm25) selector('#pm25').append(pm25);
     if(pm10) selector('#pm10').append(pm10);
     if(so2) selector('#SO2progress').value = so2;
+    if(so2) selector('#SO2label').append(so2);
     // selector('#t').append(t);
     if(w) selector('#w').append(w);
     // selector('#wg').append(wg);
