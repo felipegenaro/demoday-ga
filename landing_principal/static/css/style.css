@@ -1054,12 +1054,12 @@ footer {
         margin-right: 10px;
 }
 
-.divAllQuemSomos{
+.divAllQuemSomos {
         height: 100%;
         width: 100%;
         display: block;
     }
-    .somos-img{
+.somos-img {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-position: center;
@@ -1071,37 +1071,37 @@ footer {
         align-items: center;
         justify-content: space-evenly;
         background-image: url(https://cdn-cv.r4you.co/wp-content/uploads/2016/08/arvores_comunicacao.jpg);   
-    }
-    .somos-img h2{
-            color: rgb(240, 240, 240);
-            text-shadow: 1.5px 1.5px rgb(138, 138, 138);
-            font-size: 3.5em;
-    }
-    .divAllQuemSomos div{
+}
+.somos-img h2 {
+        color: rgb(240, 240, 240);
+        text-shadow: 1.5px 1.5px rgb(138, 138, 138);
+        font-size: 3.5em;
+}
+.divAllQuemSomos div {
         display: flex;
         align-items: center;
         justify-content: space-around;
-    }
+}
 
-    .divAllQuemSomos img{
+.divAllQuemSomos img {
         width: 75%;
         height: auto;
         border-radius: 25px;
-    }
+}
     
-    #text-somos {
+#text-somos {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0px 50px 30px 50px;
-    }
-    #text-somos p {
+}
+#text-somos p {
         font-size: 1.2em;
         text-align: center;
         color: rgb(0, 0, 0);
-    }
+}
     
-    .imagens-somos{
-        height: 600px;
+.imagens-somos img {
+        height: auto;
         margin: 50px;
-    }
+}
