@@ -47,7 +47,7 @@ nav a:hover {
 }
 
 .divContatoForm{
-        background-image: linear-gradient(to right, rgba(16, 182, 66, 0.8), rgba(7, 122, 46, 0.8));
+        background-image: linear-gradient(to right, rgba(16, 182, 65, 0.9), rgba(15, 155, 61, 0.7));
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -972,7 +972,7 @@ footer {
         margin-left: 10px;
 }
 
-.divAll3r{
+.divAll3r {
         display: grid;
         grid-template-areas: '3rs'
                              'projeto'
