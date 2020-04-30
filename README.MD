@@ -1,0 +1,1 @@
+Project made with Django Framework, deployied on Heroku (https://demoday-ga.herokuapp.com/)

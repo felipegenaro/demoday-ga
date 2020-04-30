@@ -5,6 +5,7 @@ env/
 venv/
 .venv
 .DS_Store
+.gitignore
 
 # Created by https://www.gitignore.io/api/vim,osx,node,adobe,unity,xcode,macos,linux,latex,python,windows,sublimetext,visualstudio,jetbrains+all,xamarinstudio,visualstudiocode
 # Edit at https://www.gitignore.io/?templates=vim,osx,node,adobe,unity,xcode,macos,linux,latex,python,windows,sublimetext,visualstudio,jetbrains+all,xamarinstudio,visualstudiocode
